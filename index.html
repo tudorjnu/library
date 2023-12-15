@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <header>
+    <div class="headerLeft">
+      <i class="material-symbols-rounded">book_4</i>
+      <h2>Library</h2>
+    </div>
+    <button type="button" id="addBookButton">
+      <i class="material-symbols-rounded">add</i>Add Book
+    </button>
+  </header>
+
+  <main>
+    <section class="booksContainer">
+    </section>
+  </main>
+
+  <div id="addBookModal" class="modal">
+    <div class="modalContent">
+      <form id="addBookForm">
+        <input type="text" id="title" name="title" placeholder="Title">
+        <input type="text" id="author" name="author" placeholder="Author">
+        <input type="number" id="pages" name="pages" placeholder="Number of Pages">
+      </form>
+      <section class="modalContentButtons">
+        <button type="submit" form="addBookForm">Add Book</button>
+        <span class="close"><i class="material-symbols-rounded">cancel</i></span>
+      </section>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
