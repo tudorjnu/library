@@ -1,13 +1,13 @@
 const modal = document.getElementById("addBookModal");
 const btn = document.getElementById("addBookButton");
-const span = document.getElementsByClassName("close")[0];
+const closeButton = document.getElementsByClassName("close")[0];
 const form = document.getElementById("addBookForm");
 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-span.onclick = function() {
+closeButton.onclick = function() {
   modal.style.display = "none";
 }
 
