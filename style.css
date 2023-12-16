@@ -105,6 +105,24 @@ main > .booksContainer > .book {
 }
 
 
+main > .booksContainer > .book > .bookTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main > .booksContainer > .book > .bookTitle > span#removeBook {
+  color: var(--stone-600);
+}
+
+main > .booksContainer > .book > .bookTitle > span#removeBook:hover {
+  color: var(--stone-900);
+}
+
+main > .booksContainer > .book > .bookTitle > span#removeBook:active {
+  color: var(--stone-950);
+}
+
 
 main > .booksContainer > .book > .bookInfo > p {
   font-size: 10px;

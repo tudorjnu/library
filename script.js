@@ -1,9 +1,9 @@
 const modal = document.getElementById("addBookModal");
-const btn = document.getElementById("addBookButton");
+const addBookButton = document.getElementById("addBookButton");
 const closeButton = document.getElementsByClassName("close")[0];
-const form = document.getElementById("addBookForm");
+const addBookForm = document.getElementById("addBookForm");
 
-btn.onclick = function() {
+addBookButton.onclick = function() {
   modal.style.display = "block";
 }
 
@@ -11,7 +11,7 @@ closeButton.onclick = function() {
   modal.style.display = "none";
 }
 
-form.onsubmit = function(event) {
+addBookForm.onsubmit = function(event) {
   event.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -34,10 +34,8 @@ function Book(title, author, nPages) {
   this.nPages = nPages;
   this.info = function() {
     console.log(`${title} by ${author}. ${nPages} pages`)
-
   }
 }
-
 const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295)
 
 const myLibrary = [theHobbit];
@@ -46,12 +44,22 @@ function makeBookCard(book) {
   const bookContainer = document.createElement("div");
   bookContainer.classList.add('book')
   bookContainer.innerHTML = `
-    <h3>${book.title}</h3>
+    <section class="bookTitle">
+      <h3>${book.title}</h3>
+      <span id="removeBook" class="material-symbols-rounded">close</i></span>
+    </section>
     <section class="bookInfo">
       <p>Author: ${book.author}</p>
       <p>Pages: ${book.nPages}</p>
     </section>
   `;
+
+  const removeBookButton = bookContainer.querySelector('#removeBook');
+  removeBookButton.addEventListener('click', function() {
+    myLibrary.splice(myLibrary.indexOf(book), 1);
+    displayLibrary();
+  })
+
   return bookContainer;
 }
 
@@ -69,5 +77,6 @@ function addBookToLibrary(book) {
 }
 
 displayLibrary()
+
 
 
