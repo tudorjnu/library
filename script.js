@@ -1,6 +1,6 @@
 const modal = document.getElementById("addBookModal");
 const addBookButton = document.getElementById("addBookButton");
-const closeButton = document.getElementsByClassName("close")[0];
+const closeButton = document.getElementById("closeButton");
 const addBookForm = document.getElementById("addBookForm");
 
 addBookButton.onclick = function() {

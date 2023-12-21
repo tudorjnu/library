@@ -5,13 +5,14 @@
   <title>Library</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-  <header>
+  <header class="mainHeader">
     <div class="headerLeft">
       <i class="material-symbols-rounded">book_4</i>
       <h2>Library</h2>
@@ -34,8 +35,9 @@
         <input type="number" id="pages" name="pages" placeholder="Number of Pages" required>
       </form>
       <section class="modalContentButtons">
-        <button type="submit" form="addBookForm"><i class="material-symbols-rounded">add</i></button>
-        <span class="close"><i class="material-symbols-rounded">cancel</i></span>
+        <button type="submit" id="submitBookButton" form="addBookForm"><i
+            class="material-symbols-rounded">add</i></button>
+        <button id="closeButton"><i class="material-symbols-rounded">cancel</i></button>
       </section>
     </div>
   </div>
