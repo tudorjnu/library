@@ -107,7 +107,6 @@ main {
 }
 
 
-
 /* Books */
 .booksContainer {
   display: grid;
@@ -118,7 +117,7 @@ main {
   padding: 16px;
 }
 
-.book {
+.bookCard {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 8px;
 
@@ -128,7 +127,7 @@ main {
   grid-template-rows: 2fr 1fr;
 }
 
-.book>.bookInfo>p {
+.bookCard>.bookInfo>p {
   font-size: 10px;
 }
 
